@@ -16,6 +16,9 @@ COMPLETION_WAITING_DOTS="false"
 ZSH_DISABLE_COMPFIX="true"
 HIST_STAMPS="yyyy-mm-dd"
 
+# Theme (matthieusieben/agnoster-zsh-theme)
+PROMPT_SYMBOL="→"
+
 # Zsh (history)
 unsetopt share_history
 unsetopt inc_append_history
