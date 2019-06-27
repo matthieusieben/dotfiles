@@ -4,10 +4,10 @@
 
 - Download [iTerm2](https://www.iterm2.com/).
 - Download & install the [FiraCode](https://github.com/tonsky/FiraCode) font.
-- Using Homebrew (installed during [[setup|install:macos]]), run:
+- Install [Homebrew](https://brew.sh/), then run:
 
 ```sh
-brew install zsh antigen
+brew install zsh antigen htop
 ```
 
 ## Setup
