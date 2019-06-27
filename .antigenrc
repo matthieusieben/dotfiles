@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+antigen use oh-my-zsh
+
+antigen theme matthieusieben/agnoster-zsh-theme
+
+antigen bundle colored-man-pages
+antigen bundle command-not-found
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle git
+antigen bundle gitignore
+antigen bundle history
+antigen bundle heroku
+antigen bundle node
+antigen bundle npm
+antigen bundle rake
+antigen bundle ruby
+antigen bundle sudo
+antigen bundle vim
+antigen bundle vscode
+antigen bundle urltools
+
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen bundle gem
+antigen bundle osx
+antigen bundle matthieusieben/iterm2-zsh-integration
+
+antigen apply
