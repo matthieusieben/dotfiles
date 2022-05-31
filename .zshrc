@@ -13,7 +13,7 @@ DISABLE_UPDATE_PROMPT="true"
 # DISABLE_AUTO_TITLE="true"
 # ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="false"
-ZSH_DISABLE_COMPFIX="true"
+# ZSH_DISABLE_COMPFIX="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Zsh (history)
@@ -29,5 +29,18 @@ setopt hist_beep
 bindkey "^X^_" redo
 
 # Aliases
-alias zshconfig="code ~/.zshrc ~/.antigenrc"
+alias zshconfig="code ~/.zshrc ~/.zshenv ~/.antigenrc"
 alias hsync="fc -RI"
+
+if [ "${TERM_PROGRAM}" = "iTerm.app" ]
+then
+  PS1=" "
+elif [ -d "/usr/local/lib/node_modules/typewritten" ]
+then
+  export ZSH_THEME=""
+  export TYPEWRITTEN_CURSOR=beam;
+  export TYPEWRITTEN_PROMPT_LAYOUT=pure;
+  autoload -U promptinit; promptinit;
+  prompt typewritten;
+fi
+
