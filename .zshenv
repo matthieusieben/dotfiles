@@ -9,3 +9,6 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
