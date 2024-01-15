@@ -32,15 +32,27 @@ bindkey "^X^_" redo
 alias zshconfig="code ~/.zshrc ~/.zshenv ~/.antigenrc"
 alias hsync="fc -RI"
 
+# Prompt
 if [ "${TERM_PROGRAM}" = "iTerm.app" ]
 then
   PS1=" "
+  export ZSH_THEME=""
+elif [ "${TERM_PROGRAM}" = "WarpTerminal" ]
+then
+  PS1="$ "
+  export ZSH_THEME=""
 elif [ -d "/usr/local/lib/node_modules/typewritten" ]
 then
-  export ZSH_THEME=""
   export TYPEWRITTEN_CURSOR=beam;
   export TYPEWRITTEN_PROMPT_LAYOUT=pure;
   autoload -U promptinit; promptinit;
   prompt typewritten;
 fi
 
+# pnpm
+export PNPM_HOME="/Users/msi/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

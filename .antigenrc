@@ -13,10 +13,11 @@ antigen bundle gitignore
 antigen bundle history
 antigen bundle heroku
 antigen bundle sudo
-antigen bundle vim
+# antigen bundle urltools
+# antigen bundle web-search
+
 antigen bundle vscode
-antigen bundle urltools
-antigen bundle web-search
+# antigen bundle vim
 
 # antigen bundle python
 # antigen bundle pip
@@ -33,7 +34,7 @@ antigen bundle yarn
 # antigen bundle rake
 # antigen bundle gem
 
-# antigen bundle gcloud
+# antigen bundle rust
 
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
