@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
 ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
