@@ -3,29 +3,21 @@
 ## Installation
 
 - Download [iTerm2](https://www.iterm2.com/).
-- Download & install the [FiraCode](https://github.com/tonsky/FiraCode) font.
-- Install [Homebrew](https://brew.sh/), then run:
+- Install [Homebrew](https://brew.sh/)
+- Install [Meslo](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo) font:
+  `brew tap homebrew/cask-fonts && brew install homebrew/cask-fonts/font-meslo-lg-nerd-font`
 
 ```sh
-brew install zsh antigen htop
+brew install antigen htop curl jq
 ```
 
 ## Setup
 
-Open iTerm2 then go to `Preferences` > `Profiles` > `Default`:
+Open iTerm2 then go to `Preferences` > `General` > `Preferences`. Check `Load preferences from a custom folder or URL` and set the path to the `iTerm2` folder in this directory.
 
-- In the **General** tab, change the *Command* to `/usr/local/bin/zsh`.
-- In the **General** tab, change the *Working directory* to `~/Documents/sl`.
-- In the **Colors** tab, you can *Import* [material theme](https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors) (`right click` > `Save link as...`).
-- In the **Text** tab, change the font to *Fira Code*.
-- In the **Terminal** tab, check *Unlimited scrollback*.
-- In the **Keys** tabs; `Load Preset...` > `Natural Text Editing`
+Symling the files from this directory:
 
-Close the preferences window (<kbd>⌘ Command</kbd> <kbd>w</kbd>) and open a new terminal (<kbd>⌘ Command</kbd> <kbd>n</kbd>).
-
-Copy the files from this directory:
-
-- `~/.antigenrc`
-- `~/.zshrc` (edit the `DEFAULT_USER`)
-
-Merge the `iTerm2.json` profile using [these instructions](https://www.iterm2.com/documentation-dynamic-profiles.html).
+- `cd; ln -s /absolute/path/to/dotfiles/.antigenrc`
+- `cd; ln -s /absolute/path/to/dotfiles/.zshrc`
+- `cd; ln -s /absolute/path/to/dotfiles/.zshenv` (make sore to edit the `DEFAULT_USER`)
+- `cd ~/.config; ln -s /absolute/path/to/dotfiles/config/htop`
