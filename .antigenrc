@@ -28,6 +28,7 @@ antigen bundle node
 antigen bundle npm
 # antigen bundle npx
 antigen bundle yarn
+antigen bundle pnpm
 
 # antigen bundle ruby
 # antigen bundle rbenv
@@ -42,5 +43,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen bundle macos
 antigen bundle matthieusieben/iterm2-zsh-integration
+
+antigen theme romkatv/powerlevel10k
 
 antigen apply

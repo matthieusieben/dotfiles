@@ -1,4 +1,9 @@
-#!/bin/zsh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
@@ -29,30 +34,7 @@ setopt hist_beep
 bindkey "^X^_" redo
 
 # Aliases
-alias zshconfig="code ~/.zshrc ~/.zshenv ~/.antigenrc"
 alias hsync="fc -RI"
 
-# Prompt
-if [ "${TERM_PROGRAM}" = "iTerm.app" ]
-then
-  PS1=" "
-  export ZSH_THEME=""
-elif [ "${TERM_PROGRAM}" = "WarpTerminal" ]
-then
-  PS1="$ "
-  export ZSH_THEME=""
-elif [ -d "/usr/local/lib/node_modules/typewritten" ]
-then
-  export TYPEWRITTEN_CURSOR=beam;
-  export TYPEWRITTEN_PROMPT_LAYOUT=pure;
-  autoload -U promptinit; promptinit;
-  prompt typewritten;
-fi
-
-# pnpm
-export PNPM_HOME="/Users/msi/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
