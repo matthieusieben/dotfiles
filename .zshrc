@@ -8,8 +8,6 @@ fi
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
 
-ssh-add -K ~/.ssh/id_rsa > /dev/null 2>&1
-
 # Oh My Zsh
 CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
