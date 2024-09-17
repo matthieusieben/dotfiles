@@ -33,6 +33,12 @@ bindkey "^X^_" redo
 
 # Aliases
 alias hsync="fc -RI"
+alias clock="tty-clock -c"
+
+# PATH aliases are set here because .zshenv is loaded too early
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
