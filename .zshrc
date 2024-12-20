@@ -1,12 +1,7 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 source /opt/homebrew/share/antigen/antigen.zsh
 antigen init ~/.antigenrc
+
+eval "$(starship init zsh)"
 
 # Oh My Zsh
 CASE_SENSITIVE="true"
@@ -34,11 +29,12 @@ bindkey "^X^_" redo
 # Aliases
 alias hsync="fc -RI"
 alias clock="tty-clock -c"
+alias p="pnpm"
+alias want="gh copilot suggest -t shell"
 
 # PATH aliases are set here because .zshenv is loaded too early
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

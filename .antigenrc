@@ -5,17 +5,10 @@ antigen use oh-my-zsh
 antigen bundle colored-man-pages
 antigen bundle command-not-found
 antigen bundle brew
-# antigen bundle docker
-# antigen bundle docker-compose
-# antigen bundle gcloud
 antigen bundle git
-# antigen bundle heroku
 antigen bundle rsync
-# antigen bundle sudo
 antigen bundle vscode
-antigen bundle vim
 antigen bundle node
-antigen bundle rbenv
 antigen bundle npm
 antigen bundle yarn
 antigen bundle macos
@@ -28,7 +21,5 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle matthieusieben/iterm2-zsh-integration
-
-antigen theme romkatv/powerlevel10k
 
 antigen apply
